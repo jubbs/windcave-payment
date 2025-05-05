@@ -16,7 +16,7 @@ class PxPayClient {
     }
 
     function toXml($request){
-        $arr = $request->getAllVars();
+        $arr = get_object_vars($request);
 
         $xml  = "<GenerateRequest>";
         foreach ($arr as $prop => $val) {
